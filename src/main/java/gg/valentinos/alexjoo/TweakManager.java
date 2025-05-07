@@ -1,6 +1,7 @@
 package gg.valentinos.alexjoo;
 
 import gg.valentinos.alexjoo.api.AbstractTweak;
+import gg.valentinos.alexjoo.tweaks.swimming_animals.SwimmingAnimalsTweak;
 import gg.valentinos.alexjoo.tweaks.welcome.WelcomeMessageTweak;
 
 import java.util.Collection;
@@ -16,6 +17,7 @@ public class TweakManager {
 
     public void loadTweaks(){
         registerTweak(new WelcomeMessageTweak());
+        registerTweak(new SwimmingAnimalsTweak());
 
         for (AbstractTweak tweak : tweaks.values()) {
             tweak.setConfig(plugin.getTweakConfigHandler().getTweakConfig(tweak.getId()));
